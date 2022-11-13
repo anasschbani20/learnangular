@@ -92,5 +92,20 @@
   </div>
 
 
+  <div class="box">
+    <h3>Loop: ngFor directive</h3>
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+      </tr>
+    </table>
+  </div>
+
+
 </div>
 

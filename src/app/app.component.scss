@@ -43,3 +43,15 @@
     margin-top: 10px;
   }
 }
+
+.table{
+  th{
+    border-bottom: 1px solid #ccc;
+    background-color: lightgray;
+    padding: 15px 10px;
+  }
+  td{
+    border-bottom: 1px solid lightgray;
+    padding: 15px 10px;
+  }
+}
