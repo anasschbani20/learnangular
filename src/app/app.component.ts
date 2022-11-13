@@ -14,6 +14,7 @@ export class AppComponent {
     'https://loremflickr.com/320/240/brazil,rio',
     ]
   itemImageUrl = this.images[0];
+  imageIndex = 0;
 
   getRandomImage() {
     this.itemImageUrl = this.images[Math.floor(Math.random() * this.images.length)];
