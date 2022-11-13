@@ -32,3 +32,13 @@
 <div>
   <button (click)="customStyle = !customStyle" class="myButton">Title style</button>
 </div>
+
+
+<h1>Template reference variables</h1>
+<input #phone placeholder="phone number" class="form-control" />
+
+<!-- lots of other elements -->
+
+<!-- phone refers to the input element; pass its `value` to an event handler -->
+<button class="myButton" (click)="callPhone(phone.value)">Call</button>
+<div>Your are calling {{calledPhone}}</div>

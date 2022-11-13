@@ -17,10 +17,14 @@ export class AppComponent {
   imageIndex = 0;
   italic_style = false;
   customStyle = false;
+  calledPhone = '';
 
   getRandomImage() {
     this.itemImageUrl = this.images[Math.floor(Math.random() * this.images.length)];
   }
 
+  callPhone(value: any){
+    this.calledPhone = value;
+  }
 
 }
