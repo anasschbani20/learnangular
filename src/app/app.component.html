@@ -28,3 +28,7 @@
   <button (click)="italic_style = !italic_style" class="myButton">Make it italic</button>
 </div>
 
+<h1 [ngClass]="{'custom_style': customStyle}">Style binding</h1>
+<div>
+  <button (click)="customStyle = !customStyle" class="myButton">Title style</button>
+</div>
