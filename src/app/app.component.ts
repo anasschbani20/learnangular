@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {UserService} from "./services/UserService";
+import {User} from "./entities/User.entity";
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,7 @@ export class AppComponent {
     { name: 'Hassan', age: 50 },
   ]
   user = this.users[0];
-  usersFromBackend: any = [];
+  usersFromBackend: Array<User> = [];
 
   constructor(private usersServices: UserService) {
     this.getUsersFromBackend();
