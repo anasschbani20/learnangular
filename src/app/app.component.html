@@ -66,6 +66,31 @@
     </div>
   </div>
 
+  <div class="box">
+    <h3>Conditional: ngSwitch directive</h3>
+    <h6>Enter the month number</h6>
+    <input type="number" placeholder="Enter a number" class="form-control"
+           min="1"
+           max="12"
+           [(ngModel)]="monthNumber" />
+
+    <div [ngSwitch]="monthNumber">
+      <div *ngSwitchCase="1">January</div>
+      <div *ngSwitchCase="2">February</div>
+      <div *ngSwitchCase="3">March</div>
+      <div *ngSwitchCase="4">April</div>
+      <div *ngSwitchCase="5">May</div>
+      <div *ngSwitchCase="6">Jun</div>
+      <div *ngSwitchCase="7">July</div>
+      <div *ngSwitchCase="8">August</div>
+      <div *ngSwitchCase="9">September</div>
+      <div *ngSwitchCase="10">Obctober</div>
+      <div *ngSwitchCase="11">November</div>
+      <div *ngSwitchCase="12">December</div>
+      <div *ngSwitchDefault>This is Default</div>
+    </div>
+  </div>
+
 
 </div>
 

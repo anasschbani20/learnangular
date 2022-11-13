@@ -19,6 +19,7 @@ export class AppComponent {
   customStyle = false;
   calledPhone = '';
   checkingNumber = 0;
+  monthNumber = 1;
 
   getRandomImage() {
     this.itemImageUrl = this.images[Math.floor(Math.random() * this.images.length)];
