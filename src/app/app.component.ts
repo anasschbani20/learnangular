@@ -18,6 +18,7 @@ export class AppComponent {
   italic_style = false;
   customStyle = false;
   calledPhone = '';
+  checkingNumber = 0;
 
   getRandomImage() {
     this.itemImageUrl = this.images[Math.floor(Math.random() * this.images.length)];

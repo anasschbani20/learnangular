@@ -53,5 +53,19 @@
     <button class="myButton" (click)="callPhone(phone.value)">Call</button>
     <div>Your are calling {{calledPhone}}</div>
   </div>
+
+  <div class="box">
+    <h3>Conditional: ngIf directive</h3>
+    <input type="number" placeholder="Enter a number" class="form-control" [(ngModel)]="checkingNumber" />
+
+    <div *ngIf="checkingNumber !== null">
+      <div *ngIf="checkingNumber % 2 === 0; else notEvenNumberTemplate">This is an even number</div>
+      <ng-template #notEvenNumberTemplate>
+        <div>This is an odd number</div>
+      </ng-template>
+    </div>
+  </div>
+
+
 </div>
 
