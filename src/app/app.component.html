@@ -106,6 +106,10 @@
     </table>
   </div>
 
+  <div class="box">
+    <h3>Components interaction</h3>
+    <app-child-component [parentData]="user" (askChangingUserFromChild)="changeUser()"></app-child-component>
+  </div>
 
 </div>
 
