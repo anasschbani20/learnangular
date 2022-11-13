@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from "./services/UserService";
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,11 @@ export class AppComponent {
     { name: 'Hassan', age: 50 },
   ]
   user = this.users[0];
+  usersFromBackend: any = [];
+
+  constructor(private usersServices: UserService) {
+    this.getUsersFromBackend();
+  }
 
   getRandomImage() {
     this.itemImageUrl = this.images[Math.floor(Math.random() * this.images.length)];
@@ -42,4 +48,10 @@ export class AppComponent {
     this.user = this.users[Math.floor(Math.random() * this.users.length)];
   }
 
+  getUsersFromBackend(){
+    this.usersServices.getUsers().subscribe((result: any) => {
+      this.usersFromBackend = result.data;
+      console.log('usersFromBackend', this.usersFromBackend);
+    });
+  }
 }

@@ -8,6 +8,8 @@ import {FormsModule} from "@angular/forms";
 import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
 import {MyService} from "./services/MyService";
 import {ToUpperCasePipe} from "./pipes/toUpperCase.pipe";
+import {UserService} from "./services/UserService";
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import {ToUpperCasePipe} from "./pipes/toUpperCase.pipe";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
-    MyService
+    MyService,
+    UserService,
   ],
   bootstrap: [AppComponent]
 })

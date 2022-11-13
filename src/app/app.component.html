@@ -91,7 +91,6 @@
     </div>
   </div>
 
-
   <div class="box">
     <h3>Loop: ngFor directive</h3>
     <table class="table">
@@ -114,6 +113,26 @@
   <div class="box">
     <h3>Using pipe</h3>
     Hi {{user.name}}, this is the name after using pipe: {{user.name | uppercase}}
+  </div>
+
+  <div class="box">
+    <h3>Using HTTP & Observables</h3>
+    <table class="table">
+      <tr>
+        <th>Avatar</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+      </tr>
+      <tr *ngFor="let user of usersFromBackend">
+        <td>
+          <img src="{{user?.avatar}}" />
+        </td>
+        <td>{{user?.first_name}}</td>
+        <td>{{user?.last_name}}</td>
+        <td>{{user?.email}}</td>
+      </tr>
+    </table>
   </div>
 
 </div>
