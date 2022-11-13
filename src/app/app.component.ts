@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Anass CHBANI';
+  images = [
+    'https://loremflickr.com/320/240',
+    'https://loremflickr.com/320/240/dog',
+    'https://loremflickr.com/g/320/240/paris',
+    'https://loremflickr.com/320/240/brazil,rio',
+    ]
+  itemImageUrl = this.images[0];
+
+  getRandomImage() {
+    this.itemImageUrl = this.images[Math.floor(Math.random() * this.images.length)];
+  }
+
+
 }
