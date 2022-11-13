@@ -6,3 +6,9 @@
 <p>The age is: {{parentData.age}}</p>
 
 <button class="btn btn-primary" (click)="change()">I m the child please change the user</button>
+
+<p>I can call the global variable <b>{{myService.myGlobalVariable}}</b> from myComponent</p>
+
+<p>I can change also the global variable</p>
+
+<button class="btn btn-primary" (click)="changeTheGlobalVariable()">Change the global variable</button>
