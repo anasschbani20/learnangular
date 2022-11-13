@@ -15,6 +15,7 @@ export class AppComponent {
     ]
   itemImageUrl = this.images[0];
   imageIndex = 0;
+  italic_style = false;
 
   getRandomImage() {
     this.itemImageUrl = this.images[Math.floor(Math.random() * this.images.length)];
